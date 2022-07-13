@@ -16,6 +16,8 @@ $crear.addEventListener('click', e => {
     crearList(d.getElementById('inputTarea').value)
 
 })
+
+
 //Funcion crear lista , consulta la ruta del fetch y realiza el metodo post con los datos 
 async function crearList(lista) {
     if (lista) {
@@ -59,7 +61,7 @@ const mostrar = (listas) => {
                     <label class="form-check-label" for="flexSwitchCheckDefault"></label>
                 </td>
                 <td class="opciones">
-                    <button class="editar btn btn-info" value="${sub.id}" type="button" id="editar${sub.id}" class="editar btn btn-secondary">Editar</button>
+                    <button class="editar btn btn-info"  ${sub.completed ? 'disabled' : ''} value="${sub.id}" type="button" id="editar${sub.id}" class="editar btn btn-secondary ">Editar</button>
                     <button class="eliminar btn btn-danger" type="button" id="eliminar${sub.id}" >Eliminar</button>
                 </td>
             </tr>`
@@ -112,6 +114,7 @@ body.addEventListener("click", (e) => {
     if(e.target.classList[0] == "actualizarSubList"){
         let nombreNuevo = document.getElementById("inputTarea"+subtarea.idpadre).value;
         editarSubTarea(subtarea.idpadre, subtarea.id, nombreNuevo)
+        //editarSubTarea(subtarea.id, nombreNuevo);
     }
     
     /**
@@ -239,9 +242,6 @@ async function completarSubTarea(id){
             }
         },
             res = await fetch(`${url}/completar/${id}`, options)
-        mostrarList()
-    } else {
-        alert("Ingrese una subLista porfavor!")
     }
 }
 

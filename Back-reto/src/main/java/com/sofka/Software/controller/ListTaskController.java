@@ -26,6 +26,7 @@ public class ListTaskController {
 
     @PutMapping(path = "/listTask/{id}")
     public ListTaskModel updatelistTask(@RequestBody ListTaskModel listTask, @PathVariable(value="id") Long id ) {
+        System.out.println(listTask.toString());
         return listTaskService.updateListTask(id, listTask);
     }
 
@@ -33,11 +34,6 @@ public class ListTaskController {
     public ListTaskModel updatelistTask(@PathVariable(value="id") Long id ) {
         return listTaskService.completarTask(id);
     }
-
-    /**
-     *
-     * Revisa si esto que propongo está bien o no, si no está bien ¿Como lo solucionas?
-     */
 
      @DeleteMapping(path = "/listTask/{id}")
      public void deletelistTask(@PathVariable("id")Long id){
