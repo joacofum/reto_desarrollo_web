@@ -1,0 +1,98 @@
+body {
+    background-color: #cccccc;
+    background-image: linear-gradient(red, yellow);
+    text-align: center;
+    align-content: center;
+}
+
+table,
+th,
+td {
+    border: 1px solid;
+    align-content: center;
+}
+
+thead,
+tfoot {
+    color: white;
+    text-shadow: 1px 1px 1px black;
+}
+
+thead th,
+tfoot th,
+tfoot td {
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.5));
+    border: 3px solid rgb(9, 0, 128);
+}
+
+tbody tr:nth-child(odd) {
+    background-color: #74d379;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #74d379;
+}
+
+table {
+    background-color: #74a0d3;
+    width: auto;
+}
+
+h1,
+h2,
+form {
+    text-align: center;
+}
+
+form>input {
+    margin-bottom: 5px
+}
+
+button {
+    margin: 5px;
+}
+
+.btn-success {
+    background-color: #4CAF50;
+    color: white;
+    text-decoration: none;
+    padding: 4px 20px;
+}
+
+.btn-danger {
+    background-color: crimson;
+    color: white;
+    text-decoration: none;
+    padding: 4px 5px;
+    margin: 3px;
+}
+
+.btn-info {
+    background-color: #74a0d3;
+    color: white;
+    text-decoration: none;
+    padding: 4px 5px;
+    margin: 3px;
+}
+
+button:disabled {
+    background-color: #363a3f;
+}
+
+#principal {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+input[type=text] {
+    padding: 5px 10px;
+    margin: 8px 0;
+    border: 2px solid rgb(38, 26, 202);
+    border-radius: 4px;
+}
+
+input[type=text]:focus {
+    background-color: lightblue;
+}
+

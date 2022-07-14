@@ -114,7 +114,6 @@ body.addEventListener("click", (e) => {
     if(e.target.classList[0] == "actualizarSubList"){
         let nombreNuevo = document.getElementById("inputTarea"+subtarea.idpadre).value;
         editarSubTarea(subtarea.idpadre, subtarea.id, nombreNuevo)
-        //editarSubTarea(subtarea.id, nombreNuevo);
     }
     
     /**
